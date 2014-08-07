@@ -22,7 +22,7 @@
     var playerOneHp = 100;
     var playerTwoHp = 100;
 
-    var round = 1;
+    var round = 0;
 
     function fight() {
         console.log('in the fight function');
@@ -46,6 +46,14 @@
 
             var results = winnerCheck();
             console.log(results);
+
+            if (results === "no winner"){
+                round++;
+                alert(playerOneName + ":" + playerOneHp + " **ROUND** "+round+" OVER" + playerTwoName + ":" + playerTwoHp);
+            }else{
+                alert(results);
+                break
+            };
 
             //console.log(playerOneHp);
             //console.log(playerTwoHp);

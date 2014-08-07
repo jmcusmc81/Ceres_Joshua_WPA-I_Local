@@ -49,7 +49,7 @@
 
             if (results === "no winner"){
                 round++;
-                alert(playerOneName + ":" + playerOneHp + " **ROUND** "+round+" OVER" + playerTwoName + ":" + playerTwoHp);
+                alert(playerOneName + ":" + playerOneHp + " **ROUND "+round+" OVER** " + playerTwoName + ":" + playerTwoHp);
             }else{
                 alert(results);
                 break

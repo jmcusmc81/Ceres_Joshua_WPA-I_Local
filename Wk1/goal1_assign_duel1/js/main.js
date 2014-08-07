@@ -24,25 +24,25 @@
 
     var round = 1;
 
-    function fight(){
+    function fight() {
         console.log('in the fight function');
 
-        alert(playerOneName +":"+ playerOneHp+" **START** "+playerTwoName +":"+ playerTwoHp);
-        for(var i=0; i<10; i++){
+        alert(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp);
+        for (var i = 0; i < 10; i++) {
             //random formula is -Math.floor(Math.random() * (max - min) + min);
             var minDmg1 = player1Dmg * .5;
             var minDmg2 = player2Dmg * .5;
-            var f1 = Math.floor(Math.random()*(player1Dmg-minDmg1)+minDmg1);
-            var f2 = Math.floor(Math.random()*(player2Dmg-minDmg2)+minDmg2);
+            var f1 = Math.floor(Math.random() * (player1Dmg - minDmg1) + minDmg1);
+            var f2 = Math.floor(Math.random() * (player2Dmg - minDmg2) + minDmg2);
 
             //console.log(f1);
             //console.log(f2);
 
             //inflict damage
 
-            playerOneHp-=f1;
-            playerTwoHp-=f2;
-            console.log(playerOneName +":"+ playerOneHp+" **START** "+playerTwoName +":"+ playerTwoHp);
+            playerOneHp -= f1;
+            playerTwoHp -= f2;
+            console.log(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp);
 
             var results = winnerCheck();
             console.log(results);
@@ -50,6 +50,8 @@
             //console.log(playerOneHp);
             //console.log(playerTwoHp);
         };
+
+    };
      function winnerCheck(){
         console.log("in winnerCheck FN");
 
@@ -69,7 +71,7 @@
 
 
    /*** The program gets started below ***/
-    console.log('program stats');
+    console.log('program starts');
     fight();
 
 })();

@@ -42,16 +42,32 @@
 
             playerOneHp-=f1;
             playerTwoHp-=f2;
+            console.log(playerOneName +":"+ playerOneHp+" **START** "+playerTwoName +":"+ playerTwoHp);
 
-            console.log(playerOneHp);
-            console.log(playerTwoHp);
+            var results = winnerCheck();
+            console.log(results);
+
+            //console.log(playerOneHp);
+            //console.log(playerTwoHp);
         };
-            winnerCheck()
+     function winnerCheck(){
+        console.log("in winnerCheck FN");
+
+        var result="no winner";
+
+        if(playerOneHp<1 && playerTwoHp <1){
+            result = "You Both Die";
+        }else if(playerOneHp<1){
+            result=playerTwoName+ " WINS!!!"
+        }else if(playerTwoHp<1){
+            result=playerOneName+ " WINS!!!"
+        };
+
+        return result;
+
     };
 
-    function winnerCheck(){
-        //code will go here
-    };
+
    /*** The program gets started below ***/
     console.log('program stats');
     fight();

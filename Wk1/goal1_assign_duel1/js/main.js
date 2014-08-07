@@ -27,9 +27,16 @@
     function fight(){
         console.log('in the fight function');
 
-        alert(playerOneName +":"+ playerOneHp+" *START* "+playerTwoName +":"+ playerTwoHp);
+        alert(playerOneName +":"+ playerOneHp+" **START** "+playerTwoName +":"+ playerTwoHp);
         for(var i=0; i<10; i++){
-            console.log(i);
+            //random formula is -Math.floor(Math.random() * (max - min) + min);
+            var minDmg1 = player1Dmg * .5;
+            var minDmg2 = player2Dmg * .5;
+            var f1 = Math.floor(Math.random()*(player1Dmg-minDmg1)+minDmg1);
+            var f2 = Math.floor(Math.random()*(player2Dmg-minDmg2)+minDmg2);
+
+            console.log(f1);
+            console.log(f2);
         };
             winnerCheck()
     };

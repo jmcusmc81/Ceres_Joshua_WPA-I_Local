@@ -35,8 +35,16 @@
             var f1 = Math.floor(Math.random()*(player1Dmg-minDmg1)+minDmg1);
             var f2 = Math.floor(Math.random()*(player2Dmg-minDmg2)+minDmg2);
 
-            console.log(f1);
-            console.log(f2);
+            //console.log(f1);
+            //console.log(f2);
+
+            //inflict damage
+
+            playerOneHp-=f1;
+            playerTwoHp-=f2;
+
+            console.log(playerOneHp);
+            console.log(playerTwoHp);
         };
             winnerCheck()
     };

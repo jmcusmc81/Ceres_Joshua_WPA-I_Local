@@ -8,12 +8,12 @@
 	;                                                     // Semicolon for what reason??
 	
 	// Validates search query
-	var validqte == function(query){                       //Syntax error two equal signs
+	var validqte == function(query){                       //Syntax error two equal signs, validate spelled wrong
 		
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){
 			query = query.substring(1, query.length);
-		};
+		};                                                         // Semicolon necessary? Should be a curly bracket " { "
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);
 		;                                                         // Semicolon for what reason??

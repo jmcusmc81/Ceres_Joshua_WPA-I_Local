@@ -43,8 +43,8 @@
 
 		// Check search length, must have 3 characters
 
-		if(query.length < 3){                                     //Search to make sure the User Input is greater then 3
-			alert("Your search query is too small, try again.);   // There should be closing quotation marks inside the parenthesis..Syntax error
+		if(query.length < 3){                                     //Search to make sure the User Input is less then 3
+			alert("Your search query is too small, try again.);   // There should be closing quotation marks inside the parenthesis..Syntax error.
 			searchInput.focus();
 			return;                                                //return what?
         };

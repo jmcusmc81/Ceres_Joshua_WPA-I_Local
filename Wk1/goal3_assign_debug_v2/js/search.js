@@ -124,10 +124,10 @@
 		};
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
-            document.forms[0].onsubmit = function() {                       //Confusing
+            document.forms[0].onsubmit = function() {
                 var query = searchInput.value;
 
-                validqte(query);
+                validqte(query);                                        //Runtime error. validate spelled wrong.
                 return false;
 
 	;                                                                   //Semicolon not needed.

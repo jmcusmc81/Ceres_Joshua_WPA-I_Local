@@ -8,7 +8,7 @@
 	;                                                     // Semicolon for what reason??
 	
 	// Validates search query
-	var validqte == function(query){                       //Syntax error two equal signs, validate spelled wrong
+	var validqte == function(query){                       //Syntax error two equal signs, validate spelled wrong..Runtime error?
 		
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){
@@ -20,7 +20,7 @@
 		
 		// Check search length, must have 3 characters
 		if(query.length < 3){                                     //Search to make sure the User Input is greater then 3
-			alert("Your search query is too small, try again.);   // There should be closing quotation marks inside the parenthesis.
+			alert("Your search query is too small, try again.);   // There should be closing quotation marks inside the parenthesis..Syntax error
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
@@ -44,8 +44,8 @@
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|');
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+			var dbTitleEnd = db[i].indexOf('|');                             //Runtime error.   db.TitleEnd should be?
+			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);      //Runtime error. toLowerCase proper command line. db.item?
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword

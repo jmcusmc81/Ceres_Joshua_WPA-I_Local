@@ -51,11 +51,12 @@
 
 		search(query);                                              // Variable search defined somewhere??
 
-	var search = function(query)                                     //Curly Brackets?? Semicolon Needed??
+	var search = function(query) {                                     //Curly Brackets?? Semicolon Needed??
 
-		// split the user's search query string into an array
-		var queryArray = query.join(" ");
-		var results = [];                                                   //var results = curly brackets{} ??
+        // split the user's search query string into an array
+        var queryArray = string.split(" ");
+        var results = [];                                                   //var results = curly brackets{} ??
+    }
         for(var i=0, j=db.length; i<j; i++){
 
             var dbTitleEnd = db[i].indexOf('|');                            //Runtime error.   db.TitleEnd should be?

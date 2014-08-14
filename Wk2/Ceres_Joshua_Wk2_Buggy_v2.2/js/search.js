@@ -10,54 +10,50 @@
 
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 
-    var resultsDIV = document.getElementById("results");      //variables not defined and do not have a semicolon...syntax error?
-                                                            // Semicolon for what reason??
+    var resultsDIV = document.getElementById("results"),      //variables not defined and do not have a semicolon...syntax error?
+    searchInput = document.forms[0].search,               // var?? variables not defined and do not have a semicolon...syntax error?\
+    currentSearch = ''
+    ;
 
-    // Validates search query
-    searchInput = document.forms[0].search;               // var?? variables not defined and do not have a semicolon...syntax error?
-		currentSearch = '';                                  // var?? no value after equal ( = ) sign just single quotation mark
     var validate = function(query){                        //Syntax error two equal signs, validate spelled wrong..Runtime error?
 
         // Trim whitespace from start and end of search query
-        while(query.charAt(0) = " "){                               // no code to be run for "While Loop".
-                                                                    /*
-                                                                     while (condition) {
-            //Wheres code??                                                     //code block to be executed
-                                                                      }
-                                                                    */
-        };                                                         // Semicolon necessary? Should be a curly bracket " { "
-        query = query.substring(1, query.length);
-        while(query.charAt(query.length-1) === ""){
-                  //wheres code?                                       //no code to be run for "While Loop"
-        };                                                              //Semicolon not needed
-
-        // Finds search matches
-        // loop through each index of db array
-        // each db[i] is a single video item, each title ends with a pipe "|"
-        // save a lowercase variable of the video title
-
-        // array to store matched results from database.js
-        // (DO NOT FIX THE LINE DIRECTLY BELOW)
-        query = query.substring(0, query.length-1);
-                                                              // Semicolon for what reason??
-
-		// Check search length, must have 3 characters
-
-		if(query.length < 3){                                     //Search to make sure the User Input is less then 3
-			alert("Your search query is too small, try again.");   // There should be closing quotation marks inside the parenthesis..Syntax error.
-			searchInput.focus();
-			return;                                                //return what?
+        while(query.charAt(0) = " ") {                               // no code to be run for "While Loop".
+            query = query.substring(1, query.length);
         };
+        while(query.charAt(query.length-1) === "") {
+            query = query.substring(0, query.length - 1);
+            //no code to be run for "While Loop"
+            ;                                                              //Semicolon not needed
 
-		search(query);                                              // Variable search defined somewhere??
+            // Finds search matches
+            // loop through each index of db array
+            // each db[i] is a single video item, each title ends with a pipe "|"
+            // save a lowercase variable of the video title
+
+            // array to store matched results from database.js
+            // (DO NOT FIX THE LINE DIRECTLY BELOW)
+
+            // Semicolon for what reason??
+
+            // Check search length, must have 3 characters
+
+            if (query.length < 3) {                                     //Search to make sure the User Input is less then 3
+                alert("Your search query is too small, try again.");   // There should be closing quotation marks inside the parenthesis..Syntax error.
+                searchInput.focus();
+                return;                                                //return what?
+            };
+
+            search(query);
+        };	                                           // Variable search defined somewhere??
 
 	var search = function(query) {                                     //Curly Brackets?? Semicolon Needed??
 
         // split the user's search query string into an array
         var queryArray = string.split(" ");
         var results = [];                                                   //var results = curly brackets{} ??
-    }
-        for(var i=0, j=db.length; i<j; i++){
+    };
+        for(var i=0, j=db.length; i<j; i++) {
 
             var dbTitleEnd = db[i].indexOf('|');                            //Runtime error.   db.TitleEnd should be?
             var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);      //Runtime error. toLowerCase proper command line. db.item?
@@ -75,16 +71,18 @@
             // Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
             // is the keyword anywhere in the video title?
             // If a match is found, push full db[i] into results array
-            for(var ii=0, jj=queryArray.length; ii<jj; ii++){
+            for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 
-				var qitem = queryArray[ii].tolowercase();                  //tolowercase runtime error, misspelled.
-				var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
-                if(compare !== -1){
+                var qitem = queryArray[ii].tolowercase();                  //tolowercase runtime error, misspelled.
+                var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
+                if (compare !== -1) {
                     results.push(db[i]);
                 };
-			;                                                               //Semicolon? Syntax error
 
-		;                                                                   //Semicolon? Syntax error
+            };
+                                                                           //Semicolon? Syntax error
+
+        };                                                                   //Semicolon? Syntax error
 
 		results.sort();
                 if(results.length = 0){
@@ -101,13 +99,13 @@
 		;
 		resultsDIV.innerHTML = html;                                         //Semicolon? Syntax error
 	};
-	var showMatches = function(results){
+	var showMatches = function(results) {
 
-		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>',
-			title,
-			url
-		;
+        // THE NEXT 4 LINES ARE CORRECT.
+        var html = '<p>Results</p>',
+            title;
+            url;
+
 
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){
@@ -128,8 +126,8 @@
             document.forms[0].onsubmit = function() {
                 var query = searchInput.value;
 
-                validqte(query);                                        //Runtime error. validate spelled wrong.
+                validate(query);                                        //Runtime error. validate spelled wrong.
                 return false;
 
-	;                                                                   //Semicolon not needed.
+            };                                                                   //Semicolon not needed.
     })();                                                               //Syntax error. Need a new line?

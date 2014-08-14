@@ -7,24 +7,24 @@
 
 
 (function() {
-    var resultsDIV = document.getElementById("results");    // Removed comma and added Semicolon
-    searchInput = document.forms[0].search;                 // Removed comma and added Semicolon
-    currentSearch = '';                                     // Added Semicolon
+    var resultsDIV = document.getElementById("results"),    //You can just use a comma then Semicolon at the end of statement?
+    searchInput = document.forms[0].search,
+    currentSearch = ''
+        ;
 
     var validate = function(query){                         // Changed to a single equal sign and spelled validate the right way
 
     while(query.charAt(0) = " "){
-
-
+        query = query.substring(1, query.length);
 
 };
-
-        query = query.substring(1, query.length);
-        while(query.charAt(query.length-1) === ""){
+    while(query.charAt(query.length-1) === ""){
+        query = query.substring(0, query.length-1);
+    }
 
         };
 
-    query = query.substring(0, query.length-1);
+
 
 
     if(query.length < 3) {
@@ -59,3 +59,27 @@
             showMatches(results);
         };
 
+        var showMatches = function(results) {
+
+
+            var html = '<p>Results</p>',
+                title,
+                url
+
+            for(var i=0, j=results.length; i<j; i++){
+                titleEnd = results[i].indexOf('|');
+                title = results[i].subString(0, titleEnd);
+
+                url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+
+                html += '<p><a href=' + url + '>' + title + '</a></p>';
+            };
+            resultsDIV.innerHTML = html;
+
+            document.forms[0].onsubmit = function() {
+                var query = searchInput.value;
+                validate(query);
+                return false;
+            };
+
+        })();

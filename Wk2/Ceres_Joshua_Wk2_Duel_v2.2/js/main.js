@@ -138,7 +138,14 @@
 
 })();
 
+/***
+                                            ----- Week 2 Notes ----
 
+// Week 2 Results were good. When I ran the code after finishing I was getting an error after start where the alert would come up NaN where the
+// Name should of been. The HP was no changing either. I found on lines 68 and 69 had teh wrong Index of [ 0 ].
+// playerOne[0] -= f1; --- Wrong Index
+// playerTwo[0] -= f1; --- Wrong Index
 
+// playerOne[2] -= f1; --- Correct Index
 
-
+ ***/

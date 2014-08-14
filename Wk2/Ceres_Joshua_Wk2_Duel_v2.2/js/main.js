@@ -1,7 +1,7 @@
 /**
  Joshua Ceres
- Assignment: Goal 1: PWA1 Duel1
- August 4-8 2014
+ Assignment: Develop : PWA1 Duel#2
+ August 14-15 2014
 
  **/
 
@@ -9,11 +9,15 @@
 
 (function(){ //Beginning of the coding for the fight sequence
     console.log("FIGHT!!!");
-    var playerOneName = ["Zeus", 20, 100];
-    var playerTwoName = ["Sniper", 20, 100];
 
-    /*
+    //Players Name, Damage, and Health
+    var playerOneName = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
+    var playerTwoName = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
+    //Array format reduces all the lines of code I had written to one simple line of code.
+
+    /**
     Original Code for Week 1 before converted to Array Format
+
     //player name
     var playerOneName = "Zeus"; //Player One Name
     var playerTwoName = "Sniper"; //Player Two Name
@@ -25,7 +29,7 @@
     //player health (Hp)
     var playerOneHp = 100; //Player Ones Health is 100
     var playerTwoHp = 100; //Player Twos Health is 100
-*/
+**/
     var round = 0; //Round Starts at Zero
 
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.

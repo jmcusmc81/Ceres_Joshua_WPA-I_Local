@@ -9,7 +9,11 @@
 
 (function(){ //Beginning of the coding for the fight sequence
     console.log("FIGHT!!!");
+    var playerOneName = ["Zeus", 20, 100];
+    var playerTwoName = ["Sniper", 20, 100];
 
+    /*
+    Original Code for Week 1 before converted to Array Format
     //player name
     var playerOneName = "Zeus"; //Player One Name
     var playerTwoName = "Sniper"; //Player Two Name
@@ -21,7 +25,7 @@
     //player health (Hp)
     var playerOneHp = 100; //Player Ones Health is 100
     var playerTwoHp = 100; //Player Twos Health is 100
-
+*/
     var round = 0; //Round Starts at Zero
 
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.

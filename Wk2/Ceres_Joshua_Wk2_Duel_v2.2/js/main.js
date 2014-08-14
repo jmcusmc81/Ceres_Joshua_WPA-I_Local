@@ -35,15 +35,26 @@
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.
         console.log('in the fight function');
 
+        //New Alert with Array Index
         alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
-        //Changed alert code to match the change to the Array playerOne and playerTwo. 
+        //Changed alert code to match the change to the Array playerOne and playerTwo.
+
+        //alert(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp); ---- Old Code from Week 1
 
         for (var i = 0; i < 10; i++) { // For Loop which allows code to repeatedly execute
             //random formula is -Math.floor(Math.random() * (max - min) + min);
-            var minDmg1 = player1Dmg * .5; //Variable minDmg1(Minimum Damage) for Player One that times their Max Damage by half or .5
-            var minDmg2 = player2Dmg * .5; //Variable minDmg2(Minimum Damage) for Player Two that times their Max Damage by half or .5
-            var f1 = Math.floor(Math.random() * (player1Dmg - minDmg1) + minDmg1); //Math formula that randomizes both players damage
-            var f2 = Math.floor(Math.random() * (player2Dmg - minDmg2) + minDmg2);
+            //var minDmg1 = player1Dmg * .5; --- Old Code from Week 1, updated below with correct array index
+            //var minDmg2 = player2Dmg * .5; --- Old Code from Week 1, updated below with correct array index
+
+            var minDmg1 = playerOne[1] * .5; //Variable minDmg1(Minimum Damage) for Player One that times their Max Damage by half or .5
+            var minDmg2 = playerTwo[1] * .5; //Variable minDmg2(Minimum Damage) for Player Two that times their Max Damage by half or .5
+
+            //Math formula that randomizes both players damage
+            var f1 = Math.floor(Math.random() * (playerOne[1] - minDmg1) + minDmg1); //New Code written with proper Array Index referring to player ones Damage
+            var f2 = Math.floor(Math.random() * (playerTwo[1] - minDmg2) + minDmg2); //New Code written with proper Array Index referring to player twos damage.
+
+           //var f1 = Math.floor(Math.random() * (player1Dmg - minDmg1) + minDmg1); --- Old code that has been updated above from Week 1
+           //var f2 = Math.floor(Math.random() * (player2Dmg - minDmg2) + minDmg2); --- Old code that has been updated above from Week 1
 
             //console.log(f1);
             //console.log(f2);

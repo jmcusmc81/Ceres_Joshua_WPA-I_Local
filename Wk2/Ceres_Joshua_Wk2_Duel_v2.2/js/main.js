@@ -30,6 +30,7 @@
     var playerOneHp = 100; //Player Ones Health is 100
     var playerTwoHp = 100; //Player Twos Health is 100
 **/
+
     var round = 0; //Round Starts at Zero
 
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.
@@ -59,10 +60,15 @@
             //console.log(f1);
             //console.log(f2);
 
-            //inflict damage
+            //inflict damage to players Health
+            playerOne[0] -= f1; //Takes the results of the random damage and deducts it from both players health
+            playerTwo[0] -= f2;
+            //Updated Code with Array Index for player Health
 
-            playerOneHp -= f1; //Takes the results of the random damage and deducts it from both players health
-            playerTwoHp -= f2;
+
+           // playerOneHp -= f1; --- Old Code from Week1 that has been updated above to fit the Array Index
+           // playerTwoHp -= f2; --- Old Code from Week1 that has been updated above to fit the Array Index
+
             console.log(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp);
 
             var results = winnerCheck(); //Results from winnerCheck Function.

@@ -11,8 +11,8 @@
     console.log("FIGHT!!!");
 
     //Players Name, Damage, and Health
-    var playerOneName = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
-    var playerTwoName = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
+    var playerOne = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
+    var playerTwo = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
     //Array format reduces all the lines of code I had written to one simple line of code.
 
     /**
@@ -35,7 +35,9 @@
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.
         console.log('in the fight function');
 
-        alert(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp);//Start of the Match between both Players
+        alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
+        //Changed alert code to match the change to the Array playerOne and playerTwo. 
+
         for (var i = 0; i < 10; i++) { // For Loop which allows code to repeatedly execute
             //random formula is -Math.floor(Math.random() * (max - min) + min);
             var minDmg1 = player1Dmg * .5; //Variable minDmg1(Minimum Damage) for Player One that times their Max Damage by half or .5

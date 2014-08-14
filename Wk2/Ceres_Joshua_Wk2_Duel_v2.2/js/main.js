@@ -11,6 +11,7 @@
     console.log("FIGHT!!!");
 
     //Players Name, Damage, and Health
+    // Week 2
     var playerOne = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
     var playerTwo = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
     //Array format reduces all the lines of code I had written to one simple line of code.
@@ -37,6 +38,7 @@
         console.log('in the fight function');
 
         //New Alert with Array Index
+        // Week 2
         alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
         //Changed alert code to match the change to the Array playerOne and playerTwo.
 
@@ -47,10 +49,12 @@
             //var minDmg1 = player1Dmg * .5; --- Old Code from Week 1, updated below with correct array index
             //var minDmg2 = player2Dmg * .5; --- Old Code from Week 1, updated below with correct array index
 
+            // Week 2
             var minDmg1 = playerOne[1] * .5; //Variable minDmg1(Minimum Damage) for Player One that times their Max Damage by half or .5
             var minDmg2 = playerTwo[1] * .5; //Variable minDmg2(Minimum Damage) for Player Two that times their Max Damage by half or .5
 
             //Math formula that randomizes both players damage
+            // Week 2
             var f1 = Math.floor(Math.random() * (playerOne[1] - minDmg1) + minDmg1); //New Code written with proper Array Index referring to player ones Damage
             var f2 = Math.floor(Math.random() * (playerTwo[1] - minDmg2) + minDmg2); //New Code written with proper Array Index referring to player twos damage.
 
@@ -63,20 +67,28 @@
             //inflict damage to players Health
             playerOne[0] -= f1; //Takes the results of the random damage and deducts it from both players health
             playerTwo[0] -= f2;
-            //Updated Code with Array Index for player Health
+            //Updated Code with Array Index for player Health---Week 2
 
 
            // playerOneHp -= f1; --- Old Code from Week1 that has been updated above to fit the Array Index
            // playerTwoHp -= f2; --- Old Code from Week1 that has been updated above to fit the Array Index
 
-            console.log(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp);
+            // Updated Console print with proper Array Index
+            // Week 2
+            console.log(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);
+
+            //console.log(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp); --- Old Code from Week 1
 
             var results = winnerCheck(); //Results from winnerCheck Function.
             console.log(results);
 
             if (results === "no winner"){ //if there is no winner the code continues to run and the round increases
                 round++;//Increases round
-                alert(playerOneName + ":" + playerOneHp + " **ROUND "+round+" OVER** " + playerTwoName + ":" + playerTwoHp);//Updates user wit results
+                // Updated alert to function with the change to the array using the proper Index---Week 2
+                alert(playerOne[0] + ":" + playerOne[2] + " **ROUND "+round+" OVER** " + playerTwo[0] + ":" + playerTwo[2]);
+
+                // Old code from week 1 that has been changed to an array index.
+                // alert(playerOneName + ":" + playerOneHp + " **ROUND "+round+" OVER** " + playerTwoName + ":" + playerTwoHp);//Updates user wit results
             }else{
                 alert(results);
                 break

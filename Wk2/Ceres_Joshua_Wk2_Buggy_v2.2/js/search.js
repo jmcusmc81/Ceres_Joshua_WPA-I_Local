@@ -10,13 +10,13 @@
 
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 
-    var resultsDIV = document.getElementById("results"),      //variables not defined and do not have a semicolon...syntax error?
-        ;                                                     // Semicolon for what reason??
+    var resultsDIV = document.getElementById("results");      //variables not defined and do not have a semicolon...syntax error?
+                                                            // Semicolon for what reason??
 
     // Validates search query
-    searchInput = document.forms[0].search,                 // var?? variables not defined and do not have a semicolon...syntax error?
-		currentSearch = ''                                  // var?? no value after equal ( = ) sign just single quotation mark
-    var validqte == function(query){                        //Syntax error two equal signs, validate spelled wrong..Runtime error?
+    searchInput = document.forms[0].search;               // var?? variables not defined and do not have a semicolon...syntax error?
+		currentSearch = '';                                  // var?? no value after equal ( = ) sign just single quotation mark
+    var validate = function(query){                        //Syntax error two equal signs, validate spelled wrong..Runtime error?
 
         // Trim whitespace from start and end of search query
         while(query.charAt(0) = " "){                               // no code to be run for "While Loop".
@@ -39,12 +39,12 @@
         // array to store matched results from database.js
         // (DO NOT FIX THE LINE DIRECTLY BELOW)
         query = query.substring(0, query.length-1);
-        ;                                                         // Semicolon for what reason??
+                                                              // Semicolon for what reason??
 
 		// Check search length, must have 3 characters
 
 		if(query.length < 3){                                     //Search to make sure the User Input is less then 3
-			alert("Your search query is too small, try again.);   // There should be closing quotation marks inside the parenthesis..Syntax error.
+			alert("Your search query is too small, try again.");   // There should be closing quotation marks inside the parenthesis..Syntax error.
 			searchInput.focus();
 			return;                                                //return what?
         };

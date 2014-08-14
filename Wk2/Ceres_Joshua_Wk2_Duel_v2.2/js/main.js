@@ -65,8 +65,8 @@
             //console.log(f2);
 
             //inflict damage to players Health
-            playerOne[0] -= f1; //Takes the results of the random damage and deducts it from both players health
-            playerTwo[0] -= f2;
+            playerOne[2] -= f1; //Takes the results of the random damage and deducts it from both players health
+            playerTwo[2] -= f2;
             //Updated Code with Array Index for player Health---Week 2
 
 
@@ -103,19 +103,34 @@
         console.log("in winnerCheck FN");
 
         var result="no winner"; //No winner if neither Player's Health hits zero, code repeats
-
-        if(playerOneHp<1 && playerTwoHp <1){ //If both players hit zero at the same time then both die
+        //Updated Code with proper name and index for array.
+        // Week 2
+        if(playerOne[2]<1 && playerTwo[2] <1){ //If both players hit zero at the same time then both die
             result = "You Both Die";
-        }else if(playerOneHp<1){ //If player one Health hits zero first then player two wins
-            result=playerTwoName+ " WINS!!!"
-        }else if(playerTwoHp<1){  //If Player twos health hits zero first then player one wins
-            result=playerOneName+ " WINS!!!"
+
+        }else if(playerOne[2]<1){ //If player one Health hits zero first then player two wins
+            result=playerTwo[0]+ " WINS!!!"
+        }else if(playerTwo[2]<1){  //If Player twos health hits zero first then player one wins
+            result=playerOne[0]+ " WINS!!!"
         };
 
         return result; //Returns the results
 
     };
 
+
+
+    //Old Code from Week 1 using the old variables
+/*
+    if(playerOneHp<1 && playerTwoHp <1){
+
+    }else if(playerOneHp<1){ //If player one Health hits zero first then player two wins
+    result=playerTwoName+ " WINS!!!"
+
+    }else if(playerTwoHp<1){  //If Player twos health hits zero first then player one wins
+    result=playerOneName+ " WINS!!!"
+};
+  */
 
    /*** The program gets started below ***/
     console.log('program starts');

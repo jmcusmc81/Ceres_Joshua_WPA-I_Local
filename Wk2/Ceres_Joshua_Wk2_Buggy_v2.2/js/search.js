@@ -1,27 +1,28 @@
-/**
- Joshua Ceres
- Assignment: ANALYZE Buggy Search.v1: PWA1
- August 4-8 2014
+//Joshua Ceres
+//Assignment: Debug Buggy Search.v2: PWA1
+//August 14-18 2014
 
- **/
+
 
 // Create privatized scope using a self-executing function
-(function(){
+(function() {
 
-	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
+    // Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 
-    var resultsDIV = document.getElementById("results"),      //variables not defined and do not have a semicolon...syntax error?
-    searchInput = document.forms[0].search,                  // var?? variables not defined and do not have a semicolon...syntax error?\
-    currentSearch = ''                                      //---Week 2--- cleaned up lines of code and made it more organized.
-    ;
+    var resultsDIV = document.getElementById("results"),
+                                                                    //variables not defined and do not have a semicolon...syntax error?
+    searchInput = document.forms[0].search,                         // var?? variables not defined and do not have a semicolon...syntax error?\
+    currentSearch = ''                                             //---Week 2--- cleaned up lines of code and made it more organized.
 
-    var validate = function(query){                                     //---Week 2---Removed an equal sign and spelled validate proper way
+
+    var validate = function(query) {                                     //---Week 2---Removed an equal sign and spelled validate proper way
 
         // Trim whitespace from start and end of search query
-        while(query.charAt(0) === " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
+        while (query.charAt(0) === " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
             query = query.substring(1, query.length);                  //---Week 2--- added triple equal to query/charAt
-        }
-        while(query.charAt(query.length-1) === "") {
+        };
+
+        while (query.charAt(query.length - 1) === "") {
             query = query.substring(0, query.length - 1);
             //no code to be run for "While Loop"
 
@@ -42,92 +43,101 @@
                 alert("Your search query is too small, try again.");   //---Week 2--- added quotation mark at the end of statement
                 searchInput.focus();
                 return;                                                //return what?
-            }
+            };
+
 
             search(query);
-        }	                                                            // Variable search defined somewhere??
+        };
+        	                                                            // Variable search defined somewhere??
 
-	var search = function(query) {                                     // --Week 2-- Inserted Curly Brackets
+        var search = function (query) {                                     // --Week 2-- Inserted Curly Brackets
 
-        // split the user's search query string into an array
-        var queryArray = query.split(" ");                             // ---Week 2 --- Changed from query.join to query.split
-        var results = [];
-    };
-        for(var i=0, j=db.length; i<j; i++) {
+            // split the user's search query string into an array
+            var queryArray = query.split(" ");                             // ---Week 2 --- Changed from query.join to query.split
+            var results = [];
+            for (var i = 0, j = db.length; i < j; i++) {
+                var dbTitleEnd = db[i].indexOf('|');                            //--Week 2--- Organized and cleaned up
+                var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
 
-            var dbTitleEnd = db[i].indexOf('|');                            //Runtime error.   db.TitleEnd should be?
-            var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);      //Runtime error. toLowerCase proper command line. db.item?
+                // loop through the user's search query words
+                // save a lowercase variable of the search keyword
+                // Check that matches were found, and run output functions
+                // The onsubmit event will be reviewed in upcoming Course Material.
+                // THE LINE DIRECTLY BELOW IS CORRECT
+                // return false is needed for most events - this will be reviewed in upcoming course material
+                // THE LINE DIRECTLY BELOW IS CORRECT
 
-            // loop through the user's search query words
-            // save a lowercase variable of the search keyword
-            // Check that matches were found, and run output functions
-            // The onsubmit event will be reviewed in upcoming Course Material.
-            // THE LINE DIRECTLY BELOW IS CORRECT
-            // return false is needed for most events - this will be reviewed in upcoming course material
-            // THE LINE DIRECTLY BELOW IS CORRECT
+                // Put matches into page as paragraphs with anchors
 
-            // Put matches into page as paragraphs with anchors
+                // Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
+                // is the keyword anywhere in the video title?
+                // If a match is found, push full db[i] into results array
+                for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 
-            // Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-            // is the keyword anywhere in the video title?
-            // If a match is found, push full db[i] into results array
-            for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
+                    var qitem = queryArray[ii].tolowercase();
+                    var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
+                    if (compare !== -1) {
+                        results.push(db[i]);
+                    };
 
-                var qitem = queryArray[ii].tolowercase();
-                var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
-                if (compare !== -1) {
-                    results.push(db[i]);
-                }
 
-            }
-                                                                           //--Week 2--Removed Semicolon
+                };
 
-        }                                                                  //--Week 2--Removed Semicolon
 
-		results.sort();
-                if(results.length = 0){
-            noMatch();                                                      //Variable noMatch defined somewhere?
-        }else{
-            showMatches(results);                                           //Variable showMatches defined somewhere?
-        }
 
-	};
-	var noMatch = function(){
-		var html = ''+
-			'<p>No Results found.</p>'+
-			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
-		;
-		resultsDIV.innerHTML = html;                                         //Semicolon? Syntax error
-	};
-	var showMatches = function(results) {
+            };
 
-        // THE NEXT 4 LINES ARE CORRECT.
-        var html = '<p>Results</p>',                                          // Cleaned up
-            title,
-            url
-;
 
-		// loop through all the results search() function
-		for(var i=0, j=results.length; i<j; i++){
+            results.sort();                                                     //--Week 2--Cleaned up
+            if (results.length = 0) {
+                noMatch();                                                      //Variable noMatch defined somewhere?
+            } else {
+                showMatches(results);                                           //Variable showMatches defined somewhere?
+            };
 
-			// title of video ends with pipe
-			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');                             //titleEnd Declared somewhere?
-			title = results[i].subString(0, titleEnd);                      //I do not think subString is written correctly. Runtime error
 
-			// pull the video url after the title
-			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+        };
+        var noMatch = function () {
+            var html = '' +
+                    '<p>No Results found.</p>' +
+                    '<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
+                ;
+            resultsDIV.innerHTML = html;
+        };
+        var showMatches = function (results) {
 
-			// make the video link - THE NEXT LINE IS CORRECT.
-			html += '<p><a href=' + url + '>' + title + '</a></p>';
-		}
-		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-	};
-            document.forms[0].onsubmit = function() {
-                var query = searchInput.value;
+            // THE NEXT 4 LINES ARE CORRECT.
+            var html = '<p>Results</p>',                                          //--Week 2--- Cleaned up
+                title,
+                url
+            ;
 
-                validate(query);                                        //--Week 2---Spelled validate correctly
-                return false;
 
-            };                                                                   //Semicolon not needed.
-    })();                                                               //Syntax error. Need a new line?
+            // loop through all the results search() function
+            for (var i = 0, j = results.length; i < j; i++) {
+
+                // title of video ends with pipe
+                // pull the title's string using index numbers
+                titleEnd = results[i].indexOf('|');                             //titleEnd Declared somewhere?
+                title = results[i].subString(0, titleEnd);                      //I do not think subString is written correctly. Runtime error
+
+                // pull the video url after the title
+                url = results[i].substring(results[i].indexOf('|') + 1, results[i].length);
+
+                // make the video link - THE NEXT LINE IS CORRECT.
+                html += '<p><a href=' + url + '>' + title + '</a></p>';
+            };
+
+            resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
+        };
+        document.forms[0].onsubmit = function () {
+            var query = searchInput.value;
+
+            validate(query);                                          //--Week 2---Spelled validate correctly
+            return false;
+
+
+
+    };                                                               //---Week 2--- Added Curly brace
+
+}();                                                               //Syntax error. Need a new line?

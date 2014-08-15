@@ -20,7 +20,7 @@
 };
     while(query.charAt(query.length-1) === ""){
         query = query.substring(0, query.length-1);
-    }
+    };
 
         };
 
@@ -66,20 +66,22 @@
                 title,
                 url
 
-            for(var i=0, j=results.length; i<j; i++){
+            for (var i = 0, j = results.length; i < j; i++) {
                 titleEnd = results[i].indexOf('|');
                 title = results[i].subString(0, titleEnd);
 
-                url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+                url = results[i].substring(results[i].indexOf('|') + 1, results[i].length);
 
                 html += '<p><a href=' + url + '>' + title + '</a></p>';
-            }
+            };
+
             resultsDIV.innerHTML = html;
 
-            document.forms[0].onsubmit = function() {
+            document.forms[0].onsubmit = function () {
                 var query = searchInput.value;
                 validate(query);
                 return false;
             };
+        };
 
-        })();
+})();

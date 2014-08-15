@@ -15,16 +15,16 @@
     currentSearch = ''
     ;
 
-    var validate = function(query){                        //Removed an equal sign and spelled validate proper way
+    var validate = function(query){                          //---Week 2---Removed an equal sign and spelled validate proper way
 
         // Trim whitespace from start and end of search query
-        while(query.charAt(0) = " ") {                               // no code to be run for "While Loop".
+        while(query.charAt(0) = " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
             query = query.substring(1, query.length);
         }
         while(query.charAt(query.length-1) === "") {
             query = query.substring(0, query.length - 1);
             //no code to be run for "While Loop"
-                                                                          //Semicolon not needed
+
 
             // Finds search matches
             // loop through each index of db array
@@ -39,7 +39,7 @@
             // Check search length, must have 3 characters
 
             if (query.length < 3) {                                     //Search to make sure the User Input is less then 3
-                alert("Your search query is too small, try again.");   // There should be closing quotation marks inside the parenthesis..Syntax error.
+                alert("Your search query is too small, try again.");   //---Week 2--- added quotation mark at the end of statement
                 searchInput.focus();
                 return;                                                //return what?
             }
@@ -51,7 +51,7 @@
 
         // split the user's search query string into an array
         var queryArray = ar.split(" ");
-        var results = [];                                                   //var results = curly brackets{} ??
+        var results = [];
     };
         for(var i=0, j=db.length; i<j; i++) {
 
@@ -80,9 +80,9 @@
                 }
 
             }
-                                                                           //Semicolon? Syntax error
+                                                                           //--Week 2--Removed Semicolon
 
-        }                                                                   //Semicolon? Syntax error
+        }                                                                  //--Week 2--Removed Semicolon
 
 		results.sort();
                 if(results.length = 0){

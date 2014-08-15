@@ -11,15 +11,15 @@
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 
     var resultsDIV = document.getElementById("results"),      //variables not defined and do not have a semicolon...syntax error?
-    searchInput = document.forms[0].search,               // var?? variables not defined and do not have a semicolon...syntax error?\
-    currentSearch = ''
+    searchInput = document.forms[0].search,                  // var?? variables not defined and do not have a semicolon...syntax error?\
+    currentSearch = ''                                      //---Week 2--- cleaned up lines of code and made it more organized.
     ;
 
-    var validate = function(query){                          //---Week 2---Removed an equal sign and spelled validate proper way
+    var validate = function(query){                                     //---Week 2---Removed an equal sign and spelled validate proper way
 
         // Trim whitespace from start and end of search query
-        while(query.charAt(0) = " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
-            query = query.substring(1, query.length);
+        while(query.charAt(0) === " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
+            query = query.substring(1, query.length);                  //---Week 2--- added triple equal to query/charAt
         }
         while(query.charAt(query.length-1) === "") {
             query = query.substring(0, query.length - 1);
@@ -45,12 +45,12 @@
             }
 
             search(query);
-        }	                                           // Variable search defined somewhere??
+        }	                                                            // Variable search defined somewhere??
 
 	var search = function(query) {                                     // --Week 2-- Inserted Curly Brackets
 
         // split the user's search query string into an array
-        var queryArray = ar.split(" ");
+        var queryArray = query.split(" ");                             // ---Week 2 --- Changed from query.join to query.split
         var results = [];
     };
         for(var i=0, j=db.length; i<j; i++) {
@@ -73,7 +73,7 @@
             // If a match is found, push full db[i] into results array
             for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 
-                var qitem = queryArray[ii].tolowercase();                  //tolowercase runtime error, misspelled.
+                var qitem = queryArray[ii].tolowercase();
                 var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
                 if (compare !== -1) {
                     results.push(db[i]);
@@ -102,7 +102,7 @@
 	var showMatches = function(results) {
 
         // THE NEXT 4 LINES ARE CORRECT.
-        var html = '<p>Results</p>',
+        var html = '<p>Results</p>',                                          // Cleaned up
             title,
             url
 ;
@@ -126,7 +126,7 @@
             document.forms[0].onsubmit = function() {
                 var query = searchInput.value;
 
-                validate(query);                                        //Runtime error. validate spelled wrong.
+                validate(query);                                        //--Week 2---Spelled validate correctly
                 return false;
 
             };                                                                   //Semicolon not needed.

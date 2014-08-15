@@ -102,10 +102,13 @@
             };                                                             //Added curly Bracket
 
 
-})();
+})();                                                                   //This line of code closes the beginning function on line 9
 
 /***                                    ----------Notes Wk2 Buggy v2------------
 
 I added notes section or this piece of work since I copied over everything from the other js file and removed all the comment.
 I left my own comments for what I did for debugging. This is a more neat and clean look and is not filled with to much text that can be a bit
-draining reading through it all.
+draining reading through it all. I had a bit of trouble placing curly brackets in the right spots to make the coding function correctly.
+I was getting some undefined and such for some of the codes because curly brackets were int he wrong spots.
+
+ ***/

@@ -20,12 +20,12 @@
         // Trim whitespace from start and end of search query
         while (query.charAt(0) === " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
             query = query.substring(1, query.length);                  //---Week 2--- added triple equal to query/charAt
-        };
+        }                                                               //---Week 2 added Bracket and removed semi colon
 
 
         while (query.charAt(query.length - 1) === "") {
             query = query.substring(0, query.length - 1);
-            //no code to be run for "While Loop"
+        }                                                               //---Week 2---Removed semicolon
 
 
             // Finds search matches
@@ -44,12 +44,12 @@
                 alert("Your search query is too small, try again.");   //---Week 2--- added quotation mark at the end of statement
                 searchInput.focus();
                 return;                                                //return what?
-            };
+            }
 
 
 
             search(query);
-        };
+        };                                                            //--Week 2-- Closes var validate function
 
         // Variable search defined somewhere??
 
@@ -61,7 +61,7 @@
             for (var i = 0, j = db.length; i < j; i++) {
                 var dbTitleEnd = db[i].indexOf('|');                            //--Week 2--- Organized and cleaned up
                 var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
-
+            }                                                                       //--Week 2--- Removed Semicolon
                 // loop through the user's search query words
                 // save a lowercase variable of the search keyword
                 // Check that matches were found, and run output functions
@@ -82,13 +82,13 @@
 
                     if (compare !== -1) {
                         results.push(db[i]);
-                    };
+                    }
 
 
-                };
+                }
 
 
-            };
+
 
 
             results.sort();                                                     //--Week 2--Cleaned up
@@ -97,10 +97,10 @@
                 noMatch();                                                      //Variable noMatch defined somewhere?
             } else {
                 showMatches(results);                                           //Variable showMatches defined somewhere?
-            };
+            }
 
 
-        };
+        };                                                                      //---Week 2--- Closes var search function
         var noMatch = function () {
             var html = '' +
                     '<p>No Results found.</p>' +
@@ -144,6 +144,6 @@
 
         };                                                             //---Week 2--- Added Curly brace
 
-     };                                                               //---Week 2 ---Added curly brace and semicolon
+                                                                   //---Week 2 ---Added curly brace and semicolon
 
 })();

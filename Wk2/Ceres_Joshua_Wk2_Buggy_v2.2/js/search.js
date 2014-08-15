@@ -15,16 +15,16 @@
     currentSearch = ''
     ;
 
-    var validate = function(query){                        //Syntax error two equal signs, validate spelled wrong..Runtime error?
+    var validate = function(query){                        //Removed an equal sign and spelled validate proper way
 
         // Trim whitespace from start and end of search query
         while(query.charAt(0) = " ") {                               // no code to be run for "While Loop".
             query = query.substring(1, query.length);
-        };
+        }
         while(query.charAt(query.length-1) === "") {
             query = query.substring(0, query.length - 1);
             //no code to be run for "While Loop"
-            ;                                                              //Semicolon not needed
+                                                                          //Semicolon not needed
 
             // Finds search matches
             // loop through each index of db array
@@ -42,15 +42,15 @@
                 alert("Your search query is too small, try again.");   // There should be closing quotation marks inside the parenthesis..Syntax error.
                 searchInput.focus();
                 return;                                                //return what?
-            };
+            }
 
             search(query);
-        };	                                           // Variable search defined somewhere??
+        }	                                           // Variable search defined somewhere??
 
-	var search = function(query) {                                     //Curly Brackets?? Semicolon Needed??
+	var search = function(query) {                                     // --Week 2-- Inserted Curly Brackets
 
         // split the user's search query string into an array
-        var queryArray = string.split(" ");
+        var queryArray = ar.split(" ");
         var results = [];                                                   //var results = curly brackets{} ??
     };
         for(var i=0, j=db.length; i<j; i++) {
@@ -77,19 +77,19 @@
                 var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
                 if (compare !== -1) {
                     results.push(db[i]);
-                };
+                }
 
-            };
+            }
                                                                            //Semicolon? Syntax error
 
-        };                                                                   //Semicolon? Syntax error
+        }                                                                   //Semicolon? Syntax error
 
 		results.sort();
                 if(results.length = 0){
             noMatch();                                                      //Variable noMatch defined somewhere?
         }else{
             showMatches(results);                                           //Variable showMatches defined somewhere?
-        };
+        }
 
 	};
 	var noMatch = function(){
@@ -103,9 +103,9 @@
 
         // THE NEXT 4 LINES ARE CORRECT.
         var html = '<p>Results</p>',
-            title;
-            url;
-
+            title,
+            url
+;
 
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){
@@ -120,7 +120,7 @@
 
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>';
-		};
+		}
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
             document.forms[0].onsubmit = function() {

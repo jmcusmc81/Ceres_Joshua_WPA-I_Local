@@ -73,7 +73,7 @@
                 url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
 
                 html += '<p><a href=' + url + '>' + title + '</a></p>';
-            };
+            }
             resultsDIV.innerHTML = html;
 
             document.forms[0].onsubmit = function() {

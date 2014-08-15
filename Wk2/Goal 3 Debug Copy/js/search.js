@@ -12,27 +12,27 @@
     currentSearch = ''                                      //Code is nice and neat
         ;
 
-    var validate = function(query){                         // Changed to a single equal sign and spelled validate the right way
+   var validate = function(query) {                         // Changed to a single equal sign and spelled validate the right way
 
-    while(query.charAt(0) = " "){
-        query = query.substring(1, query.length);
-
-};
-    while(query.charAt(query.length-1) === ""){
-        query = query.substring(0, query.length-1);
-    };
-
-        };
+       while (query.charAt(0) === " ") {
+           query = query.substring(1, query.length);
+       };
 
 
+       while (query.charAt(query.length - 1) === "") {
+           query = query.substring(0, query.length - 1);
+       };
 
 
-    if(query.length < 3) {
-      alert("Your search query is too small, try again.");      // Added quotation mark to the end of the statement. It was missing.
-      searchInput.focus();
-      return;
-};
-        search(query);
+       if (query.length < 3) {
+           alert("Your search query is too small, try again.");      // Added quotation mark to the end of the statement. It was missing.
+
+           searchInput.focus();
+           return;
+       };
+
+       search(query);
+   };
 
         var search = function(query){                       // Added a curly bracket
             var queryArray = query.split(" ");             // Changed from query.join to query.split

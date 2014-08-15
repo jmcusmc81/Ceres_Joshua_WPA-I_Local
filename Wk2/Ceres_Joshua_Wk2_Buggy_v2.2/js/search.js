@@ -101,6 +101,8 @@
 
 
         };                                                                      //---Week 2--- Closes var search function
+
+
         var noMatch = function () {
             var html = '' +
                     '<p>No Results found.</p>' +
@@ -108,6 +110,7 @@
                 ;
             resultsDIV.innerHTML = html;
         };
+
         var showMatches = function (results) {
 
             // THE NEXT 4 LINES ARE CORRECT.
@@ -130,12 +133,13 @@
 
                 // make the video link - THE NEXT LINE IS CORRECT.
                 html += '<p><a href=' + url + '>' + title + '</a></p>';
-            };
+            }
 
 
             resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-        };
-        document.forms[0].onsubmit = function () {
+        };                                                                          //---Week 2---Closes var showMatches function
+
+            document.forms[0].onsubmit = function () {
             var query = searchInput.value;
 
             validate(query);                                          //--Week 2---Spelled validate correctly
@@ -146,4 +150,8 @@
 
                                                                    //---Week 2 ---Added curly brace and semicolon
 
-})();
+})();                                                               //---Week 2--- Closes entire function
+
+
+
+//I have added a second debug copy with less comments and a cleaner look to the coding.

@@ -9,7 +9,7 @@
 (function() {
     var resultsDIV = document.getElementById("results"),    //You can just use a comma then Semicolon at the end of statement?
     searchInput = document.forms[0].search,
-    currentSearch = ''
+    currentSearch = ''                                      //Code is nice and neat
         ;
 
     var validate = function(query){                         // Changed to a single equal sign and spelled validate the right way
@@ -35,7 +35,7 @@
         search(query);
 
         var search = function(query){                       // Added a curly bracket
-            var queryArray = string.split(" ");             // Changed from query.join to string.split
+            var queryArray = query.split(" ");             // Changed from query.join to query.split
             var results = [];
             for(var i=0, j=db.length; i<j; i++){
                 var dbTitleEnd = db[i].indexOf('|');
@@ -65,6 +65,7 @@
             var html = '<p>Results</p>',
                 title,
                 url
+            ;
 
             for (var i = 0, j = results.length; i < j; i++) {
                 titleEnd = results[i].indexOf('|');
@@ -79,7 +80,7 @@
 
             document.forms[0].onsubmit = function () {
                 var query = searchInput.value;
-                validate(query);
+                validate(query);                                        //validate spelled correctly
                 return false;
             };
         };

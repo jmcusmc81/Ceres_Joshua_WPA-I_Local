@@ -13,7 +13,7 @@
                                                                     //variables not defined and do not have a semicolon...syntax error?
     searchInput = document.forms[0].search,                         // var?? variables not defined and do not have a semicolon...syntax error?\
     currentSearch = ''                                             //---Week 2--- cleaned up lines of code and made it more organized.
-
+;
 
     var validate = function(query) {                                     //---Week 2---Removed an equal sign and spelled validate proper way
 
@@ -21,6 +21,7 @@
         while (query.charAt(0) === " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
             query = query.substring(1, query.length);                  //---Week 2--- added triple equal to query/charAt
         };
+
 
         while (query.charAt(query.length - 1) === "") {
             query = query.substring(0, query.length - 1);
@@ -48,7 +49,8 @@
 
             search(query);
         };
-        	                                                            // Variable search defined somewhere??
+
+        // Variable search defined somewhere??
 
         var search = function (query) {                                     // --Week 2-- Inserted Curly Brackets
 
@@ -76,6 +78,7 @@
 
                     var qitem = queryArray[ii].tolowercase();
                     var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
+
                     if (compare !== -1) {
                         results.push(db[i]);
                     };
@@ -84,11 +87,11 @@
                 };
 
 
-
             };
 
 
             results.sort();                                                     //--Week 2--Cleaned up
+
             if (results.length = 0) {
                 noMatch();                                                      //Variable noMatch defined somewhere?
             } else {
@@ -110,7 +113,7 @@
             var html = '<p>Results</p>',                                          //--Week 2--- Cleaned up
                 title,
                 url
-            ;
+                ;
 
 
             // loop through all the results search() function
@@ -128,6 +131,7 @@
                 html += '<p><a href=' + url + '>' + title + '</a></p>';
             };
 
+
             resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
         };
         document.forms[0].onsubmit = function () {
@@ -137,7 +141,8 @@
             return false;
 
 
+        };                                                             //---Week 2--- Added Curly brace
 
-    };                                                               //---Week 2--- Added Curly brace
+     };                                                               //---Week 2 ---Added curly brace and semicolon
 
-}();                                                               //Syntax error. Need a new line?
+})();

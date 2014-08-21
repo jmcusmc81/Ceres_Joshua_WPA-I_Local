@@ -3,7 +3,7 @@
 }
 
 body{
-	background: url('../images/DOTA-bg.psd') repeat;
+	background: url('../images/DOTA2-bg.png') repeat;
 }
 
 #scores{
@@ -35,7 +35,7 @@ body{
 #fight_btn{
 	position: absolute;
 	z-index: 25;
-	margin: 30% 44%;
+	margin: 27% 45.5%;                        /* Adjusted Margin so fight button would sit exactly where I wanted it. --- Joshua Ceres----
 }
 
 #fight_bg{

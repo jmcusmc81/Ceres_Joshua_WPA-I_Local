@@ -12,22 +12,22 @@ body{
 	height: 100%;
 }
 
-#Zeus{
+#Zeus{                                  /* Changed the name   */
 	margin: 0px 0px 0px 15%;
 	float:left;
 }
 
-#Sniper{
+#Sniper{                                /* Changed the name   */
 	margin: 0px 0px 0px 59%;
 	float:left;
 }
 
-#Zeus p{
+#Zeus p{                                /* Changed the name   */
 	font-family: arial;
 	font-size:  25px;
 }
 
-#Sniper p{
+#Sniper p{                              /* Changed the name   */
 	font-family: arial;
 	font-size:  25px;
 }
@@ -38,7 +38,7 @@ body{
 	margin: 30% 50%;                     /* Adjusted Margin so fight button would sit exactly where I wanted it. --- Joshua Ceres---- */
 }
 
-#DOTA2-Fighters{
+#DOTA2-Fighters{                           /* Changed the name   */
 	position: fixed;
 	z-index: 10;
 	-webkit-background-size: cover; /*for webKit*/
@@ -47,7 +47,7 @@ body{
     background-size: cover; /*generic*/
 }
 
-#DOTA2-Fighters img{
+#DOTA2-Fighters img{                        /* Changed the name   */
 	height: 100%;
 	width: 100%;
 }

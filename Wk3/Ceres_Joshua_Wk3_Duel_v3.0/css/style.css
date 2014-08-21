@@ -3,7 +3,7 @@
 }
 
 body{
-	background: url('../images/DOTA2-bg.png') repeat;
+	background: url('../images/DOTA2-bg2.png') repeat;
 }
 
 #scores{
@@ -12,22 +12,22 @@ body{
 	height: 100%;
 }
 
-#kabal{
+#Zeus{
 	margin: 0px 0px 0px 15%;
 	float:left;
 }
 
-#kratos{
+#Sniper{
 	margin: 0px 0px 0px 59%;
 	float:left;
 }
 
-#kabal p{
+#Zeus p{
 	font-family: arial;
 	font-size:  25px;
 }
 
-#kratos p{
+#Sniper p{
 	font-family: arial;
 	font-size:  25px;
 }
@@ -35,10 +35,10 @@ body{
 #fight_btn{
 	position: absolute;
 	z-index: 25;
-	margin: 27% 45.5%;                        /* Adjusted Margin so fight button would sit exactly where I wanted it. --- Joshua Ceres----
+	margin: 30% 50%;                     /* Adjusted Margin so fight button would sit exactly where I wanted it. --- Joshua Ceres---- */
 }
 
-#fight_bg{
+#DOTA2-Fighters{
 	position: fixed;
 	z-index: 10;
 	-webkit-background-size: cover; /*for webKit*/
@@ -47,7 +47,7 @@ body{
     background-size: cover; /*generic*/
 }
 
-#fight_bg img{
+#DOTA2-Fighters img{
 	height: 100%;
 	width: 100%;
 }

@@ -76,6 +76,9 @@
         fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
         fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
+        //Math formula for determining damage
+        var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage *.5);
+
         //New Alert with Array Index
         /******---------Week 2 Code-----------*******/
         //alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
@@ -96,9 +99,9 @@
             var minDmg2 = playerTwo[1] * .5; //Variable minDmg2(Minimum Damage) for Player Two that times their Max Damage by half or .5
 
             //Math formula that randomizes both players damage
-            // Week 2
-            var f1 = Math.floor(Math.random() * (playerOne[1] - minDmg1) + minDmg1); //New Code written with proper Array Index referring to player ones Damage
-            var f2 = Math.floor(Math.random() * (playerTwo[1] - minDmg2) + minDmg2); //New Code written with proper Array Index referring to player twos damage.
+            /******---------Week 2 Code-----------*******/
+            //var f1 = Math.floor(Math.random() * (playerOne[1] - minDmg1) + minDmg1); //New Code written with proper Array Index referring to player ones Damage
+            //var f2 = Math.floor(Math.random() * (playerTwo[1] - minDmg2) + minDmg2); //New Code written with proper Array Index referring to player twos damage.
 
             /******---------Week 1 Code-----------*******/
            //var f1 = Math.floor(Math.random() * (player1Dmg - minDmg1) + minDmg1); --- Old code that has been updated above from Week 1

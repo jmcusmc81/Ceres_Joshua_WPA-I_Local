@@ -41,8 +41,8 @@
         var results = [];
         for (var i = 0, j = db.length; i < j; i++) {
             var dbTitleEnd = db[i].indexOf('|');
-            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);      //tolowercase spelled wrong.Correction toLowerCase
-        }                                                      //No Semicolon needed
+            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);       //tolowercase spelled wrong.Correction toLowerCase
+        }                                                      //No Semicolon needed and curly bracket no needed here
 
 
         for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {

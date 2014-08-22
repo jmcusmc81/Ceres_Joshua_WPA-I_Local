@@ -43,7 +43,7 @@
             if (query.length < 3) {                                      //Search to make sure the User Input is less then 3
                 alert("Your search query is too small, try again.");     //---Week 2--- added quotation mark at the end of statement
                 searchInput.focus();
-                return;                                                 
+                return;
             }
 
 
@@ -61,7 +61,7 @@
             for (var i = 0, j = db.length; i < j; i++) {
                 var dbTitleEnd = db[i].indexOf('|');                                //--Week 2--- Organized and cleaned up
                 var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);      //---Week 3--- Changed toLoweCase()
-            }                                                                       //--Week 2--- Removed Semicolon
+                //--Week 2--- Removed Semicolon
                 // loop through the user's search query words
                 // save a lowercase variable of the search keyword
                 // Check that matches were found, and run output functions
@@ -88,8 +88,7 @@
                 }
 
 
-
-
+            }                                                                     //--Week 3--- Moved Curly brace here and fixed problem
 
             results.sort();                                                     //--Week 2--Cleaned up
 
@@ -99,8 +98,7 @@
                 showMatches(results);                                           //Variable showMatches defined somewhere?
             }
 
-
-        };                                                                      //---Week 2--- Closes var search function
+        };
 
 
         var noMatch = function () {
@@ -138,20 +136,20 @@
 
 
             resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-        };                                                                          //---Week 2---Closes var showMatches function
+        };                                                              //---Week 2---Closes var showMatches function
 
             document.forms[0].onsubmit = function () {
             var query = searchInput.value;
 
-            validate(query);                                          //--Week 2---Spelled validate correctly
+            validate(query);                                           //--Week 2---Spelled validate correctly
             return false;
 
 
         };                                                             //---Week 2--- Added Curly brace
 
-                                                                   //---Week 2 ---Added curly brace and semicolon
+                                                                       //---Week 2 ---Added curly brace and semicolon
 
-})();                                                               //---Week 2--- Closes entire function
+})();                                                                  //---Week 2--- Closes entire function
 
 
 

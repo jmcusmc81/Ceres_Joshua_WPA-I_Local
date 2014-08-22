@@ -42,24 +42,25 @@
         for (var i = 0, j = db.length; i < j; i++) {
             var dbTitleEnd = db[i].indexOf('|');
             var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);       //tolowercase spelled wrong.Correction toLowerCase
-        }                                                      //No Semicolon needed and curly bracket no needed here
+            //No Semicolon needed and curly bracket no needed here
 
 
-        for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
-            var qitem = queryArray[ii].toLowerCase();                         //fixed to .toLowerCase()
-            var compare = dbitem.indexOf(qitem);
-            if (compare !== -1) {
-                results.push(db[i]);
-            }                                                   //No semicolon needed
+            for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
+                var qitem = queryArray[ii].toLowerCase();                         //fixed to .toLowerCase()
+                var compare = dbitem.indexOf(qitem);
+                if (compare !== -1) {
+                    results.push(db[i]);
+                }                                                   //No semicolon needed
 
-        }                                                       //No semicolon needed and added curly bracket
+            }                                                       //No semicolon needed and added curly bracket
 
+        }                                                           //Moved Curly bracket from line 45 to this line
 
 
 
     results.sort();
 
-    if (results.length = 0) {
+    if (results.length === 0) {                                     //Changed to triple equal signs
         noMatch();
     } else {
         showMatches(results);

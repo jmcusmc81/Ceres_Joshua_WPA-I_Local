@@ -85,7 +85,7 @@
 
             for (var i = 0, j = results.length; i < j; i++) {
                 titleEnd = results[i].indexOf('|');
-                title = results[i].subString(0, titleEnd);
+                title = results[i].substring(0, titleEnd);              //.substring is all lowercase
 
                 url = results[i].substring(results[i].indexOf('|') + 1, results[i].length);
 

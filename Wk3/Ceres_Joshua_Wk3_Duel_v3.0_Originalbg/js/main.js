@@ -82,6 +82,15 @@
         }
     }
 
+    function winnerCheck() {
+        var result = "no winner";
+        if (fighters[0].health < 1 && fighters[1].health < 1) {
+            result = "You Both Die - GAME OVER!";
+        }else if(fighters[0].health < 1){
+            result = fighters[1].name + " WINS!!!"
+        }else if(fighters)
+    }
+
 
         /******---------Week 1 Code-----------*******/
         /*
@@ -181,7 +190,7 @@
 */
 
              /******---------Week 1 and 2 Code-----------*******/
-            /******---------Winner Check Function-----------*******/         
+            /******---------Winner Check Function-----------*******/
              /*
      function winnerCheck(){ //Function that checks for a winner by comparing it to the number Zero. If one hits zero the other Player wins, and if both hit zero then both players die.
         console.log("in winnerCheck FN");

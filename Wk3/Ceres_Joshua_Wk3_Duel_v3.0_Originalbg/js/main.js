@@ -64,9 +64,14 @@
         var result = winnerCheck();
         console.log(result);
 
-        round_txt.innerHTML = "Round #" + round + " Results:";
-        round++;
+        round_txt.innerHTML = "Round #" + round + " Results:"; // Round number plus results
+        round++;  //Increases round
+        if(result = "no winner")
+        {
+            fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+            fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
+        }
         /******---------Week 1 Code-----------*******/
         /*
          Original Code for Week 1 before converted to Array Format

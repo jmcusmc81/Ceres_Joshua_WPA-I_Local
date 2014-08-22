@@ -68,12 +68,17 @@
     fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
     fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
+    /******---------Week 1 and 2 Code-----------*******/
+//**  Fight Function.
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.
         console.log('in the fight function');
+        /******---------Week 3 Code-----------*******/
+        fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+        fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
         //New Alert with Array Index
-        // Week 2
-        alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
+        /******---------Week 2 Code-----------*******/
+        //alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
         //Changed alert code to match the change to the Array playerOne and playerTwo.
 
         /******---------Week 1 Code-----------*******/

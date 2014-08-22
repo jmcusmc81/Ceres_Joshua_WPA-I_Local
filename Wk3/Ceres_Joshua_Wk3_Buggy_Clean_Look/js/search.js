@@ -1,9 +1,8 @@
-/**
- * Created by Josh on 8/14/14.
- */
+//Joshua Ceres
+//August 22 2014
 // Debugging search.js
-// Week 2
-// Buggy assignment v2.2
+// Week 3
+// Buggy Clean Look v. 3.0
 
 
 (function() {
@@ -42,7 +41,7 @@
         var results = [];
         for (var i = 0, j = db.length; i < j; i++) {
             var dbTitleEnd = db[i].indexOf('|');
-            var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);      //tolowercase spelled wrong.Correction toLowerCase
         }                                                      //No Semicolon needed
 
 

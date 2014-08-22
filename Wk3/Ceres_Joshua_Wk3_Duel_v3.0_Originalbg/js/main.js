@@ -40,6 +40,12 @@
     var fighter2_txt = document.querySelector("#kratos").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
     var round_txt = document.querySelector("h5"); //Pull in text between html tags
     var button = document.getElementById("fight_btn"); //Pull in Main button that starts the game.
+
+    console.log();
+
+    //Click Event
+    button.addEventListener("click", fight, false);
+
     var round = 0; //Round Starts at Zero
 
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.

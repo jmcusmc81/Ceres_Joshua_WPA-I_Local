@@ -64,6 +64,9 @@
         var result = winnerCheck();
         console.log(result);
 
+        round_txt.innerHTML = "Round #" + round + " Results:";
+        round++;
+
         /******---------Week 1 Code-----------*******/
         /*
          Original Code for Week 1 before converted to Array Format

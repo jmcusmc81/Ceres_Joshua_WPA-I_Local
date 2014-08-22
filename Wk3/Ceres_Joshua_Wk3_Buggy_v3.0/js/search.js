@@ -1,7 +1,7 @@
 //Joshua Ceres
-//Assignment: Debug Buggy Search.v2: PWA1
-//August 14-18 2014
-
+//Week 3 Buggy v 3.0
+//August 22 2014
+//PWA-1
 
 
 // Create privatized scope using a self-executing function
@@ -40,27 +40,27 @@
 
             // Check search length, must have 3 characters
 
-            if (query.length < 3) {                                     //Search to make sure the User Input is less then 3
-                alert("Your search query is too small, try again.");   //---Week 2--- added quotation mark at the end of statement
+            if (query.length < 3) {                                      //Search to make sure the User Input is less then 3
+                alert("Your search query is too small, try again.");     //---Week 2--- added quotation mark at the end of statement
                 searchInput.focus();
-                return;                                                //return what?
+                return;                                                  //return what?
             }
 
 
 
             search(query);
-        };                                                            //--Week 2-- Closes var validate function
+        };                                                                         //--Week 2-- Closes var validate function
 
         // Variable search defined somewhere??
 
-        var search = function (query) {                                     // --Week 2-- Inserted Curly Brackets
+        var search = function (query) {                                           // --Week 2-- Inserted Curly Brackets
 
             // split the user's search query string into an array
-            var queryArray = query.split(" ");                             // ---Week 2 --- Changed from query.join to query.split
+            var queryArray = query.split(" ");                                    // ---Week 2 --- Changed from query.join to query.split
             var results = [];
             for (var i = 0, j = db.length; i < j; i++) {
-                var dbTitleEnd = db[i].indexOf('|');                            //--Week 2--- Organized and cleaned up
-                var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+                var dbTitleEnd = db[i].indexOf('|');                                //--Week 2--- Organized and cleaned up
+                var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);      //---Week 3--- Changed toLoweCase()
             }                                                                       //--Week 2--- Removed Semicolon
                 // loop through the user's search query words
                 // save a lowercase variable of the search keyword
@@ -77,7 +77,7 @@
                 // If a match is found, push full db[i] into results array
                 for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 
-                    var qitem = queryArray[ii].tolowercase();
+                    var qitem = queryArray[ii].tolowercase();                   
                     var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
 
                     if (compare !== -1) {

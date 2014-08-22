@@ -81,7 +81,12 @@
         var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage *.5);  //Fighter 2 damage
 
         //players inflict the damage generated above
+        fighters[0].health -= f1;
+        fighters[1].health -= f2;
+        console.log(fighters[0].health, fighters[1].health);
+
         
+
 
         //New Alert with Array Index
         /******---------Week 2 Code-----------*******/
@@ -98,9 +103,9 @@
             //var minDmg1 = player1Dmg * .5; --- Old Code from Week 1, updated below with correct array index
             //var minDmg2 = player2Dmg * .5; --- Old Code from Week 1, updated below with correct array index
 
-            // Week 2
-            var minDmg1 = playerOne[1] * .5; //Variable minDmg1(Minimum Damage) for Player One that times their Max Damage by half or .5
-            var minDmg2 = playerTwo[1] * .5; //Variable minDmg2(Minimum Damage) for Player Two that times their Max Damage by half or .5
+            /******---------Week 2 Code-----------*******/
+            //var minDmg1 = playerOne[1] * .5; //Variable minDmg1(Minimum Damage) for Player One that times their Max Damage by half or .5
+            //var minDmg2 = playerTwo[1] * .5; //Variable minDmg2(Minimum Damage) for Player Two that times their Max Damage by half or .5
 
             //Math formula that randomizes both players damage
             /******---------Week 2 Code-----------*******/
@@ -113,10 +118,10 @@
 
             //console.log(f1);
             //console.log(f2);
-
+            /******---------Week 2 Code-----------*******/
             //inflict damage to players Health
-            playerOne[2] -= f1; //Takes the results of the random damage and deducts it from both players health
-            playerTwo[2] -= f2;
+            //playerOne[2] -= f1; //Takes the results of the random damage and deducts it from both players health
+            //playerTwo[2] -= f2;
             //Updated Code with Array Index for player Health---Week 2
 
             /******---------Week 1 Code-----------*******/

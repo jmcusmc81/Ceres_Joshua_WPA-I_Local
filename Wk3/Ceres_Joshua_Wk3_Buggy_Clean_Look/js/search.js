@@ -41,8 +41,8 @@
         var results = [];
         for (var i = 0, j = db.length; i < j; i++) {
             var dbTitleEnd = db[i].indexOf('|');
-            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);       //tolowercase spelled wrong.Correction toLowerCase
-            //No Semicolon needed and curly bracket no needed here
+            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);       //tolowercase spelled wrong. Correction toLowerCase
+                                                                     //No Semicolon needed and curly bracket no needed here
 
 
             for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
@@ -104,11 +104,9 @@
 
 })();                                                                   //This line of code closes the beginning function on line 9
 
-/***                                    ----------Notes Wk2 Buggy v2------------
+/***                                    ----------Notes Wk3 Buggy v3------------
 
-I added notes section or this piece of work since I copied over everything from the other js file and removed all the comment.
-I left my own comments for what I did for debugging. This is a more neat and clean look and is not filled with to much text that can be a bit
-draining reading through it all. I had a bit of trouble placing curly brackets in the right spots to make the coding function correctly.
-I was getting some undefined and such for some of the codes because curly brackets were int he wrong spots.
-
+Moved a Curly bracket from line 45 to line 57. The results links were not coming up because of where the curly bracket was placed.
+Changed .tolowercase() to its appropriate spelling which is .toLowerCase() on line 44 and 49. Fixed spelling of .subString() to all
+lowercase on line 88. On line 63 added triple equal signs to result.length.
  ***/

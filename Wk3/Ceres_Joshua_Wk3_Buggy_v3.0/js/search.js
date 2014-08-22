@@ -77,7 +77,7 @@
                 // If a match is found, push full db[i] into results array
                 for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 
-                    var qitem = queryArray[ii].tolowercase();                   
+                    var qitem = queryArray[ii].toLowerCase();                   //Changed toLowerCase()
                     var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
 
                     if (compare !== -1) {

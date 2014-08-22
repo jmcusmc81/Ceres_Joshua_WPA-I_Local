@@ -7,10 +7,10 @@
 
 //self-executing function
 
-(function(){ //Beginning of the coding for the fight sequence
+(function() { //Beginning of the coding for the fight sequence
     console.log("FIGHT!!!");
     /******---------Week 3 Code-----------*******/
-        //DOM pieces to grab HTML tags
+    //DOM pieces to grab HTML tags
     var fighter1_txt = document.querySelector("#kabal").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
     var fighter2_txt = document.querySelector("#kratos").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
     var round_txt = document.querySelector("h5"); //Pull in text between html tags
@@ -23,18 +23,19 @@
 
     //Objects for my fighters
 
-   var fighters = [
-       {
-           name:"Kabal",   //index0.name or index[0] with object-key "name" = Kabal
-           damage:20,      //index0.damage
-           health:100      //index0.health
-       },
-       {
-           name:"Kratos",  //index1.name or index[1] with object-key "name = Kratos
-           damage:20,      //index1,damage
-           health:100      //index1.health
+    var fighters = [
+        {
+            name: "Kabal",   //index0.name or index[0] with object-key "name" = Kabal
+            damage: 20,      //index0.damage
+            health: 100      //index0.health
+        },
+        {
+            name: "Kratos",  //index1.name or index[1] with object-key "name = Kratos
+            damage: 20,      //index1,damage
+            health: 100      //index1.health
 
-       }];
+        }
+    ];
 
     var round = 0; //Round Starts at Zero
 
@@ -86,13 +87,14 @@
         var result = "no winner";
         if (fighters[0].health < 1 && fighters[1].health < 1) {
             result = "You Both Die - GAME OVER!";
-        }else if(fighters[0].health < 1){
+        } else if (fighters[0].health < 1) {
             result = fighters[1].name + " WINS!!!"
-        }else if(fighters[1].healt < 1)
-            result= fighters[0].name + " WINS!!!"
+        } else if (fighters[1].healt < 1) {
+            result = fighters[0].name + " WINS!!!"
+        }
+        return result;
     }
-
-
+})();
         /******---------Week 1 Code-----------*******/
         /*
          Original Code for Week 1 before converted to Array Format

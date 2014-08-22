@@ -35,8 +35,11 @@
     var playerTwoHp = 100; //Player Twos Health is 100
 */
     /******---------Week 3 Code-----------*******/
+        //DOM pieces to grab HTML tags
     var fighter1_txt = document.querySelector("#kabal").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
-
+    var fighter2_txt = document.querySelector("#kratos").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
+    var round_txt = document.querySelector("h5"); //Pull in text between html tags
+    var button = document.getElementById("fight_btn"); //Pull in Main button that starts the game.
     var round = 0; //Round Starts at Zero
 
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.

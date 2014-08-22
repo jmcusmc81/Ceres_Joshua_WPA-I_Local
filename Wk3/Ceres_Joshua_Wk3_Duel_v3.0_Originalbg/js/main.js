@@ -52,8 +52,8 @@
         fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
         //Math formula for determining damage
-        var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage *.5);  //Fighter 1 damage
-        var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage *.5);  //Fighter 2 damage
+        var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage * .5);  //Fighter 1 damage
+        var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage * .5);  //Fighter 2 damage
 
         //players inflict the damage generated above
         fighters[0].health -= f1;
@@ -66,15 +66,23 @@
 
         round_txt.innerHTML = "Round #" + round + " Results:"; // Round number plus results
         round++;  //Increases round
-        if(result = "no winner")
-        {
+        if (result = "no winner") {
             fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
             fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
-        }else{
+        } else {
             fighter1_txt.innerHTML = result;
             fighter2_txt.innerHTML = "";
+
+            //Disable the button - need the below if using addEvenListener
+            button.removeEventListener("click", fight, false);
+            //button disabled = true;
+
+            document.querySelector('.buttonblue').innerHTML = 'DONE!!!';
         }
+    }
+
+
         /******---------Week 1 Code-----------*******/
         /*
          Original Code for Week 1 before converted to Array Format
@@ -108,7 +116,7 @@
         /******---------Week 1 Code-----------*******/
         //alert(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp); ---- Old Code from Week 1
 
-        for (var i = 0; i < 10; i++) { // For Loop which allows code to repeatedly execute
+            //for (var i = 0; i < 10; i++) { // For Loop which allows code to repeatedly execute
             //random formula is -Math.floor(Math.random() * (max - min) + min);
 
             /******---------Week 1 Code-----------*******/
@@ -142,11 +150,11 @@
 
             // Updated Console print with proper Array Index
             // Week 2
-            console.log(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);
+            //console.log(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);
 
             /******---------Week 1 Code-----------*******/
             //console.log(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp); --- Old Code from Week 1
-
+/*
             var results = winnerCheck(); //Results from winnerCheck Function.
             console.log(results);
 
@@ -155,9 +163,11 @@
                 // Updated alert to function with the change to the array using the proper Index---Week 2
                 alert(playerOne[0] + ":" + playerOne[2] + " **ROUND "+round+" OVER** " + playerTwo[0] + ":" + playerTwo[2]);
 
+*/
                 /******---------Week 1 Code-----------*******/
                 // Old code from week 1 that has been changed to an array index.
                 // alert(playerOneName + ":" + playerOneHp + " **ROUND "+round+" OVER** " + playerTwoName + ":" + playerTwoHp);//Updates user wit results
+/*
             }else{
                 alert(results);
                 break
@@ -168,6 +178,11 @@
         };
 
     };
+*/
+
+             /******---------Week 1 and 2 Code-----------*******/
+            /******---------Winner Check Function-----------*******/         
+             /*
      function winnerCheck(){ //Function that checks for a winner by comparing it to the number Zero. If one hits zero the other Player wins, and if both hit zero then both players die.
         console.log("in winnerCheck FN");
 
@@ -187,6 +202,7 @@
 
     };
 
+    */
 
     /******---------Week 1 Code-----------*******/
     //Old Code from Week 1 using the old variables

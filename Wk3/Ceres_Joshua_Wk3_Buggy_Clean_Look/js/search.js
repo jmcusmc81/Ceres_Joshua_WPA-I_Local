@@ -46,7 +46,7 @@
 
 
         for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
-            var qitem = queryArray[ii].tolowercase();
+            var qitem = queryArray[ii].toLowerCase();                         //fixed to .toLowerCase()
             var compare = dbitem.indexOf(qitem);
             if (compare !== -1) {
                 results.push(db[i]);

@@ -1,7 +1,7 @@
 /**
  Joshua Ceres
- Assignment: Develop : PWA1 Duel#2
- August 14-15 2014
+ Assignment: Develop : PWA1 Duel#3
+ August 22 2014
 
  **/
 
@@ -9,14 +9,17 @@
 
 (function(){ //Beginning of the coding for the fight sequence
     console.log("FIGHT!!!");
-
+    /******---------Week 2 Code-----------*******/
+/*
     //Players Name, Damage, and Health
     // Week 2
     var playerOne = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
     var playerTwo = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
     //Array format reduces all the lines of code I had written to one simple line of code.
+*/
 
-    /**
+    /******---------Week 1 Code-----------*******/
+    /*
     Original Code for Week 1 before converted to Array Format
 
     //player name
@@ -30,7 +33,7 @@
     //player health (Hp)
     var playerOneHp = 100; //Player Ones Health is 100
     var playerTwoHp = 100; //Player Twos Health is 100
-**/
+*/
 
     var round = 0; //Round Starts at Zero
 

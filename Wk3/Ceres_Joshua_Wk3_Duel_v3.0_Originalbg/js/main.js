@@ -34,6 +34,8 @@
     var playerOneHp = 100; //Player Ones Health is 100
     var playerTwoHp = 100; //Player Twos Health is 100
 */
+    /******---------Week 3 Code-----------*******/
+    var fighter1_txt = document.querySelector("#kabal").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
 
     var round = 0; //Round Starts at Zero
 

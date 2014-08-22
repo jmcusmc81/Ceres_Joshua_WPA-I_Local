@@ -12,14 +12,14 @@
     var resultsDIV = document.getElementById("results"),
                                                                     //variables not defined and do not have a semicolon...syntax error?
     searchInput = document.forms[0].search,                         // var?? variables not defined and do not have a semicolon...syntax error?\
-    currentSearch = ''                                             //---Week 2--- cleaned up lines of code and made it more organized.
+    currentSearch = ''                                                  //---Week 2--- cleaned up lines of code and made it more organized.
 ;
 
     var validate = function(query) {                                     //---Week 2---Removed an equal sign and spelled validate proper way
 
         // Trim whitespace from start and end of search query
         while (query.charAt(0) === " ") {                               //---Week 2--- fixed code , it was placed outside the while loop
-            query = query.substring(1, query.length);                  //---Week 2--- added triple equal to query/charAt
+            query = query.substring(1, query.length);                   //---Week 2--- added triple equal to query/charAt
         }                                                               //---Week 2 added Bracket and removed semi colon
 
 
@@ -43,7 +43,7 @@
             if (query.length < 3) {                                      //Search to make sure the User Input is less then 3
                 alert("Your search query is too small, try again.");     //---Week 2--- added quotation mark at the end of statement
                 searchInput.focus();
-                return;                                                  //return what?
+                return;                                                 
             }
 
 
@@ -77,7 +77,7 @@
                 // If a match is found, push full db[i] into results array
                 for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 
-                    var qitem = queryArray[ii].toLowerCase();                   //Changed toLowerCase()
+                    var qitem = queryArray[ii].toLowerCase();                   //---Week 3---Changed toLowerCase()
                     var compare = dbitem.indexOf(qitem);                       // db.item? or meant to be dbItem?
 
                     if (compare !== -1) {
@@ -93,7 +93,7 @@
 
             results.sort();                                                     //--Week 2--Cleaned up
 
-            if (results.length = 0) {
+            if (results.length === 0) {                                           //--Week 3---Changed to triple equal sings
                 noMatch();                                                      //Variable noMatch defined somewhere?
             } else {
                 showMatches(results);                                           //Variable showMatches defined somewhere?
@@ -126,7 +126,8 @@
                 // title of video ends with pipe
                 // pull the title's string using index numbers
                 titleEnd = results[i].indexOf('|');                             //titleEnd Declared somewhere?
-                title = results[i].subString(0, titleEnd);                      //I do not think subString is written correctly. Runtime error
+                                                                                //--WEEK 3---Fixed.substring
+                title = results[i].substring(0, titleEnd);                      //I do not think subString is written correctly. Runtime error
 
                 // pull the video url after the title
                 url = results[i].substring(results[i].indexOf('|') + 1, results[i].length);

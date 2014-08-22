@@ -71,6 +71,9 @@
             fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
             fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
+        }else{
+            fighter1_txt.innerHTML = result;
+            fighter2_txt.innerHTML = "";
         }
         /******---------Week 1 Code-----------*******/
         /*

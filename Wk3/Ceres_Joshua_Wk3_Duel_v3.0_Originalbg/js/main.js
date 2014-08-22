@@ -46,6 +46,21 @@
     //Click Event
     button.addEventListener("click", fight, false);
 
+    //Objects for my fighters
+
+   var fighters = [
+       {
+           name:"Kabal",   //index0.name or index[0] with object-key "name" = Kabal
+           damage:20,      //index0.damage
+           health:100      //index0.health
+       },
+       {
+           name:"Kratos",  //index1.name or index[1] with object-key "name = Kratos
+           damage:20,      //index1,damage
+           health:100      //index1.health
+
+       }];
+
     var round = 0; //Round Starts at Zero
 
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.

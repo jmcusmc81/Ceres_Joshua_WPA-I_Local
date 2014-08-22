@@ -9,31 +9,6 @@
 
 (function(){ //Beginning of the coding for the fight sequence
     console.log("FIGHT!!!");
-    /******---------Week 2 Code-----------*******/
-/*
-    //Players Name, Damage, and Health
-    // Week 2
-    var playerOne = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
-    var playerTwo = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
-    //Array format reduces all the lines of code I had written to one simple line of code.
-*/
-
-    /******---------Week 1 Code-----------*******/
-    /*
-    Original Code for Week 1 before converted to Array Format
-
-    //player name
-    var playerOneName = "Zeus"; //Player One Name
-    var playerTwoName = "Sniper"; //Player Two Name
-
-    //player damage (Dmg)
-    var player1Dmg = 20; //Player One Damage
-    var player2Dmg = 20; //Player Two Damage
-
-    //player health (Hp)
-    var playerOneHp = 100; //Player Ones Health is 100
-    var playerTwoHp = 100; //Player Twos Health is 100
-*/
     /******---------Week 3 Code-----------*******/
         //DOM pieces to grab HTML tags
     var fighter1_txt = document.querySelector("#kabal").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
@@ -68,7 +43,7 @@
     fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
     fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
-    /******---------Week 1 and 2 Code-----------*******/
+    /******---------Fight Function-----------*******/
 //**  Fight Function.
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.
         console.log('in the fight function');
@@ -85,7 +60,33 @@
         fighters[1].health -= f2;
         console.log(fighters[0].health, fighters[1].health);
 
-        
+        //check for winner
+        var result = winnerCheck();
+        console.log(result);
+
+        /******---------Week 1 Code-----------*******/
+        /*
+         Original Code for Week 1 before converted to Array Format
+
+         //player name
+         var playerOneName = "Zeus"; //Player One Name
+         var playerTwoName = "Sniper"; //Player Two Name
+
+         //player damage (Dmg)
+         var player1Dmg = 20; //Player One Damage
+         var player2Dmg = 20; //Player Two Damage
+
+         //player health (Hp)
+         var playerOneHp = 100; //Player Ones Health is 100
+         var playerTwoHp = 100; //Player Twos Health is 100
+*/
+         /******---------Week 2 Code-----------*******/
+             /*
+    //Players Name, Damage, and Health
+    var playerOne = ["Zeus", 20, 100];          // Player One [ "Name", Damage, and Health ]---- Changed to an Array
+    var playerTwo = ["Sniper", 20, 100];        // Player Two [ "Name", Damage, and Health ]---- Changed to an Array
+    //Array format reduces all the lines of code I had written to one simple line of code.
+    */
 
 
         //New Alert with Array Index

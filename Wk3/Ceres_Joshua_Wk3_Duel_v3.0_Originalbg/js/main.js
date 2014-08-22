@@ -63,6 +63,9 @@
 
     var round = 0; //Round Starts at Zero
 
+    //DOM innerHTML text for the top of the HTML page
+    round_txt.innerHTML = "Click FIGHT BUTTON on Start!";
+
     function fight() { //Fight Function that contains both players Minimum Damage, Health, and Round Results.
         console.log('in the fight function');
 

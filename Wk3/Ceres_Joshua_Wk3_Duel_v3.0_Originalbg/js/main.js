@@ -77,7 +77,11 @@
         fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
         //Math formula for determining damage
-        var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage *.5);
+        var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage *.5);  //Fighter 1 damage
+        var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage *.5);  //Fighter 2 damage
+
+        //players inflict the damage generated above
+        
 
         //New Alert with Array Index
         /******---------Week 2 Code-----------*******/

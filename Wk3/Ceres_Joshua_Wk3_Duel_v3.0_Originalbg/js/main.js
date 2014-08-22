@@ -45,10 +45,13 @@
         alert(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);//Start of the Match between both Players
         //Changed alert code to match the change to the Array playerOne and playerTwo.
 
+        /******---------Week 1 Code-----------*******/
         //alert(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp); ---- Old Code from Week 1
 
         for (var i = 0; i < 10; i++) { // For Loop which allows code to repeatedly execute
             //random formula is -Math.floor(Math.random() * (max - min) + min);
+
+            /******---------Week 1 Code-----------*******/
             //var minDmg1 = player1Dmg * .5; --- Old Code from Week 1, updated below with correct array index
             //var minDmg2 = player2Dmg * .5; --- Old Code from Week 1, updated below with correct array index
 
@@ -61,6 +64,7 @@
             var f1 = Math.floor(Math.random() * (playerOne[1] - minDmg1) + minDmg1); //New Code written with proper Array Index referring to player ones Damage
             var f2 = Math.floor(Math.random() * (playerTwo[1] - minDmg2) + minDmg2); //New Code written with proper Array Index referring to player twos damage.
 
+            /******---------Week 1 Code-----------*******/
            //var f1 = Math.floor(Math.random() * (player1Dmg - minDmg1) + minDmg1); --- Old code that has been updated above from Week 1
            //var f2 = Math.floor(Math.random() * (player2Dmg - minDmg2) + minDmg2); --- Old code that has been updated above from Week 1
 
@@ -72,7 +76,7 @@
             playerTwo[2] -= f2;
             //Updated Code with Array Index for player Health---Week 2
 
-
+            /******---------Week 1 Code-----------*******/
            // playerOneHp -= f1; --- Old Code from Week1 that has been updated above to fit the Array Index
            // playerTwoHp -= f2; --- Old Code from Week1 that has been updated above to fit the Array Index
 
@@ -80,6 +84,7 @@
             // Week 2
             console.log(playerOne[0] + ":" + playerOne[2] + " **START** " + playerTwo[0] + ":" + playerTwo[2]);
 
+            /******---------Week 1 Code-----------*******/
             //console.log(playerOneName + ":" + playerOneHp + " **START** " + playerTwoName + ":" + playerTwoHp); --- Old Code from Week 1
 
             var results = winnerCheck(); //Results from winnerCheck Function.
@@ -90,6 +95,7 @@
                 // Updated alert to function with the change to the array using the proper Index---Week 2
                 alert(playerOne[0] + ":" + playerOne[2] + " **ROUND "+round+" OVER** " + playerTwo[0] + ":" + playerTwo[2]);
 
+                /******---------Week 1 Code-----------*******/
                 // Old code from week 1 that has been changed to an array index.
                 // alert(playerOneName + ":" + playerOneHp + " **ROUND "+round+" OVER** " + playerTwoName + ":" + playerTwoHp);//Updates user wit results
             }else{
@@ -122,7 +128,7 @@
     };
 
 
-
+    /******---------Week 1 Code-----------*******/
     //Old Code from Week 1 using the old variables
 /*
     if(playerOneHp<1 && playerTwoHp <1){

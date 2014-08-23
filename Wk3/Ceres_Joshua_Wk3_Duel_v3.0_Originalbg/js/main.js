@@ -25,12 +25,14 @@
 
     var fighters = [
         {
-            name: "Kabal",   //index0.name or index[0] with object-key "name" = Kabal
+            //Object index of 0 then add the period and name for what you want ot pull out of the fighters variable.
+            name: "kabal",   //index0.name or index[0] with object-key "name" = kabal
             damage: 20,      //index0.damage
             health: 100      //index0.health
         },
         {
-            name: "Kratos",  //index1.name or index[1] with object-key "name = Kratos
+            //Object index of 1 then add the period and name for what you want ot pull out of the fighters variable.
+            name: "kratos",  //index1.name or index[1] with object-key "name = kratos
             damage: 20,      //index1,damage
             health: 100      //index1.health
         }

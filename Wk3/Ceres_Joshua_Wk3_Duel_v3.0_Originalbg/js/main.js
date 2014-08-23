@@ -11,12 +11,12 @@
     console.log("FIGHT!!!");
     /******---------Week 3 Code-----------*******/
     //DOM pieces to grab HTML tags
-    var fighter1_txt = document.querySelector("#kabal").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
-    var fighter2_txt = document.querySelector("#kratos").querySelector("p"); //Use # sign for querySelector nad no # sign for get ElementbyID
+    var fighter1_txt = document.getElementById("kabal").querySelector("p"); //Use # sign for querySelector and no # sign for get ElementbyID
+    var fighter2_txt = document.getElementById("kratos").querySelector("p"); //Use # sign for querySelector and no # sign for get ElementbyID
     var round_txt = document.querySelector("h5"); //Pull in text between html tags
     var button = document.getElementById("fight_btn"); //Pull in Main button that starts the game.
 
-    console.log();
+    console.log(fighter1_txt);
 
     //Click Event
     button.addEventListener("click", fight, false);
@@ -33,7 +33,6 @@
             name: "Kratos",  //index1.name or index[1] with object-key "name = Kratos
             damage: 20,      //index1,damage
             health: 100      //index1.health
-
         }
     ];
 
@@ -79,7 +78,7 @@
             button.removeEventListener("click", fight, false);
             //button disabled = true;
 
-            document.querySelector('.buttonblue').innerHTML = 'DONE!!!';
+            document.querySelector('buttonblue').innerHTML = 'DONE!!!';
         }
     }
 
@@ -89,7 +88,7 @@
             result = "You Both Die - GAME OVER!";
         } else if (fighters[0].health < 1) {
             result = fighters[1].name + " WINS!!!"
-        } else if (fighters[1].healt < 1) {
+        } else if (fighters[1].health < 1) {
             result = fighters[0].name + " WINS!!!"
         }
         return result;
@@ -231,19 +230,14 @@
 
    /*** The program gets started below ***/
     console.log('program starts');
-    fight();
+   // fight();
 
-})();
+// })();
 
 /***
                                             ----- Week 2 Notes ----
 
-// Week 2 Results were good. When I ran the code after finishing I was getting an error after *** START *** where
-// the alert would come up NaN where the Name should of been. The HP was not changing either.
-// I found on lines 68 and 69 had teh wrong Index of [ 0 ].
-// playerOne[0] -= f1; --- Wrong Index
-// playerTwo[0] -= f1; --- Wrong Index
-
-// playerOne[2] -= f1; --- Correct Index
-
+I have no idea what is happening with this code. Its not giving me any errors and I have tried it with querySelector and getElementbyID.
+I do not think I changed anything from the original HTML so the querySelector should work on the "p".
+I commented out all the old code and re-typed everything fresh.
  ***/

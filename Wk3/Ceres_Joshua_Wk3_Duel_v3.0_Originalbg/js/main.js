@@ -240,4 +240,5 @@
 I have no idea what is happening with this code. Its not giving me any errors and I have tried it with querySelector and getElementbyID.
 I do not think I changed anything from the original HTML so the querySelector should work on the "p".
 I commented out all the old code and re-typed everything fresh.
+I went on W3schools website and read everything and went over my notes for the DOM classes. At this point my brain is to tired to comprehend.
  ***/

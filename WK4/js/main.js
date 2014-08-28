@@ -22,6 +22,8 @@ function(){     //Self executing function
     myDog2.bark("Arf-f Arff!")
 
 
-
+    //Setting another instance: My other Friend's Dog - 3rd Dog
+    var myDog3 = new Dog("Fido", "Brown", "Pitbull");
+    myDog3.bark("Growl!!! Grrr!")
 
 }

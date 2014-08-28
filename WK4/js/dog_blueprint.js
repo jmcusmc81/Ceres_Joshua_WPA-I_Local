@@ -14,4 +14,10 @@ function Dog(n, c, b){
 }
 
 
-//Step 2
+//Step 2: Add more Functionality to "Dog" Constructor Function by using Prototype Property
+
+Dog.prototype.bark =  function(barkingsound){
+    console.log(this.name + " says: " + barkingsound);
+    var dogsound = barkingsound;
+    return dogsound;
+}

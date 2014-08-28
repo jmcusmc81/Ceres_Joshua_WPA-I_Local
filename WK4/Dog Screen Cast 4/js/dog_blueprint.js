@@ -6,7 +6,7 @@
 //Step 1 : Setup Constructor Function
 
 function Dog(n, c, b){
-    console.log("New Dg Added to Kennel!");
+    console.log("New Dog Added to Kennel!");
     this.name = n; //dog's name
     this.color = c;  //dog's color
     this.breed = b;  //dog's breed

@@ -32,10 +32,10 @@
     console.log(" ");
     console.log(" ******** New Dog Kennel Summary ******** ");
     console.log(" ");
-    console.log("My Dog is a : ", myDog1.color = " " + myDog1.breed + " called", myDog1.name);  //1st dog
+    console.log("My Dog is a : ", myDog1.color + " " + myDog1.breed + " called", myDog1.name);  //1st dog
     console.log(" ");
-    console.log("My Best Friend's Dog is a : ", myDog2.color = " " + myDog2.breed + " called", myDog2.name); //2nd Dog
+    console.log("My Best Friend's Dog is a : ", myDog2.color + " " + myDog2.breed + " called", myDog2.name); //2nd Dog
     console.log(" ");
-    console.log("My Other Friend's Dog is a : ", myDog3.color = " " + myDog3.breed + " called", myDog3.name);  //3rd Dog
+    console.log("My Other Friend's Dog is a : ", myDog3.color + " " + myDog3.breed + " called", myDog3.name);  //3rd Dog
 
 })(); //End Wrapper

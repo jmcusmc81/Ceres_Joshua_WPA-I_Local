@@ -12,4 +12,16 @@ function(){     //Self executing function
     myDog1.color = "Brown";
     myDog1.breed = "German Shepard";
     myDog1.bark("Woof! Woof! Wooff!!")
+
+
+    //Setting up another instance: My Friend's Dog - 2nd Dog
+    var myDog2 = new Dog();
+    myDog2.name = "Samantha";
+    myDog2.color = "Black and White";
+    myDog2.breed = "Poodle";
+    myDog2.bark("Arf-f Arff!")
+
+
+
+
 }

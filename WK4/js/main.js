@@ -4,7 +4,7 @@
  */
 
 
-function(){     //Self executing function
+(function(){     //Self executing function
 
     //Create !st Instance of the dog object and assign it myDog variable and running Constructor Function
     var myDog1 = new Dog();
@@ -26,4 +26,16 @@ function(){     //Self executing function
     var myDog3 = new Dog("Fido", "Brown", "Pitbull");
     myDog3.bark("Growl!!! Grrr!")
 
-}
+
+    //Console.log and sumarize all new Dogs
+
+    console.log(" ");
+    console.log(" ******** New Dog Kennel Summary ******** ");
+    console.log(" ");
+    console.log("My Dog is a : ", myDog1.color = " " + myDog1.breed + " called", myDog1.name);  //1st dog
+    console.log(" ");
+    console.log("My Best Friend's Dog is a : ", myDog2.color = " " + myDog2.breed + " called", myDog2.name); //2nd Dog
+    console.log(" ");
+    console.log("My Other Friend's Dog is a : ", myDog3.color = " " + myDog3.breed + " called", myDog3.name);  //3rd Dog
+
+})(); //End Wrapper
